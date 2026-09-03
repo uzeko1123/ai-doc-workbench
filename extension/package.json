@@ -1,0 +1,60 @@
+{
+  "name": "ai-doc-workbench",
+  "publisher": "ai-doc-workbench",
+  "version": "0.0.0",
+  "repository": {},
+  "engines": {
+    "vscode": "^1.134.0"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-doc-workbench.convert",
+        "title": "转换为 Markdown"
+      },
+      {
+        "command": "ai-doc-workbench.export",
+        "title": "导出为 DOCX"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "ai-doc-workbench.convert",
+          "group": "navigation@0",
+          "when": "explorerResourceIsFolder || resourceExtname =~ /\\.(pdf|docx|doc|xlsx|xls|pptx|ppt)$/i"
+        },
+        {
+          "command": "ai-doc-workbench.export",
+          "group": "navigation@0",
+          "when": "!explorerResourceIsFolder && resourceExtname =~ /\\.md$/i"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test",
+    "pack": "vsce package"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "24.x",
+    "@types/vscode": "^1.134.0",
+    "@vscode/test-cli": "^0.0.15",
+    "@vscode/test-electron": "^3.0.0",
+    "@vscode/vsce": "^3.9.2",
+    "eslint": "^10.5.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}

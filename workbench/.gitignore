@@ -1,0 +1,11 @@
+/*
+!/template/
+!/.gitignore
+
+.archive
+.assets
+.import
+.export
+!template/.assets
+!template/.import
+!template/.export
