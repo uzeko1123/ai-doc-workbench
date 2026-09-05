@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "workbench": true,
+    "extension": true,
+    "tools": true
+  }
+}

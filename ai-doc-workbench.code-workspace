@@ -14,21 +14,7 @@
     },
   ],
   "settings": {
-    "workbench.startupEditor": "none",
     "workbench.colorTheme": "Light Modern",
-    "workbench.iconTheme": "vscode-modern-icons",
-    "workbench.activityBar.compact": true,
-    "editor.fontFamily": "'Sarasa Mono SC', Consolas, 'Courier New', monospace",
-    "window.commandCenter": false,
-    "window.title": "${activeFolderShort}${separator}${activeEditorShort}${separator}${rootNameShort}",
-    "chat.disableAIFeatures": true,
-    "git.enableSmartCommit": true,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
-    "files.exclude": {
-      "workbench": true,
-      "extension": true,
-      "tools": true,
-    },
     "workbench.colorCustomizations": {
       "diffEditor.insertedLineBackground": "#ccc3",
       "diffEditor.removedLineBackground": "#ccc3",
@@ -40,7 +26,6 @@
   },
   "extensions": {
     "recommendations": [
-      "ms-ceintl.vscode-language-pack-zh-hans",
       "anthropic.claude-code",
       "cweijan.vscode-office",
       "esbenp.prettier-vscode",
